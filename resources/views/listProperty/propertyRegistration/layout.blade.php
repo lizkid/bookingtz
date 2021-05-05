@@ -101,8 +101,8 @@
                                         <div class="row row-container">
 
                                             <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-8 mb-3">
+                                                <div class="row to-be-appended">
+                                                    <div class="col-md-6 mb-3">
                                                         <label>Beds available in this room</label>
                                                         <select name="bed" class="form-control">
                                                             <option selected disabled>--select room type--</option>
@@ -127,7 +127,9 @@
 
                                                 </div>
 
-                                                <h4 style="color: #3c4093; cursor: pointer;" class="text-center">Add another bed type</h4>
+                                                <div class="append-container"></div>
+
+                                                <h4 style="color: #3c4093; cursor: pointer;" class="text-center another-bed">Add another bed type</h4>
 
                                             </div>
 
@@ -339,6 +341,46 @@
                 }
             });
 
+        });
+    </script>
+
+    <script>
+        $(document).ready(function (){
+
+            $('.another-bed').click(function (){
+
+                let bedType = '<div class="row"><div class="col-md-6 mb-3">\n' +
+                    '                                                        <label>Beds available in this room</label>\n' +
+                    '                                                        <select name="bed" class="form-control">\n' +
+                    '                                                            <option selected disabled>--select room type--</option>\n' +
+                    '                                                            <option value="Presidential Suite">Presidential Suite</option>\n' +
+                    '                                                            <option value="Royal Suite">Royal Suite</option>\n' +
+                    '                                                            <option value="1 King Bed">One King Bed </option>\n' +
+                    '                                                            <option value="2 Kings Bed">Two Kings Bed</option>\n' +
+                    '                                                            <option value="1 King Bed Sea View">One King Bed Sea View </option>\n' +
+                    '                                                            <option value="2 Kings Bed Sea View">Two Kings Bed Sea View</option>\n' +
+                    '\n' +
+                    '                                                        </select>\n' +
+                    '                                                    </div>';
+                bedType += '<div class="col-md-4 mb-3">\n' +
+                    '                                                        <label>Number Of Beds</label>\n' +
+                    '                                                        <div class="d-flex justify-content-around room-bed-container">\n' +
+                    '                                                            <span id="bed-minus"><i class="fas fa-minus"></i></span>\n' +
+                    '                                                            <input class="form-control" id="input-bed">\n' +
+                    '                                                            <span  id="bed-plus"><i class="fas fa-plus"></i></span>\n' +
+                    '                                                        </div>\n' +
+                    '                                                    </div>';
+
+                bedType += '<div class="col-md-2"><button style="margin-top: 30px;" class="btn btn-danger" type="button" id="close">Remove</button></div></div>';
+
+                $(".append-container").append(bedType);
+
+                $(document).on('click', '#close', function (){
+
+                    $(this).closest('.row').remove();
+                });
+
+            });
         });
     </script>
 @stop
