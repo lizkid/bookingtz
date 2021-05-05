@@ -6,6 +6,7 @@
     #room-plus, #room-minus, #bed-plus, #bed-minus, #guest-plus, #guest-minus{
     padding: 10px;
     cursor: pointer;
+    color: #62a0d6;
     }
 
     #room-plus:hover, #room-minus:hover, #bed-plus:hover, #bed-minus:hover, #guest-plus:hover, #guest-minus:hover{
@@ -19,6 +20,14 @@
     .room-bed-container{
     width: 120px;
     border: 1px solid #ced4da;
+    }
+
+    .another-bed{
+    color: #c9cad8;
+    cursor: pointer;
+    background: #ea851c;
+    padding: 10px;
+    width: 40%;
     }
 
 @stop
@@ -129,7 +138,7 @@
 
                                                 <div class="append-container"></div>
 
-                                                <h4 style="color: #3c4093; cursor: pointer;" class="text-center another-bed">Add another bed type</h4>
+                                                <h4 class="text-center another-bed">Add another bed type</h4>
 
                                             </div>
 

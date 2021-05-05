@@ -60,9 +60,9 @@ class PropertyRegistrationController extends Controller
         {
             Session::flash('alert-success', ''.$result->result);
 
-            Session::flash('hotelId', ''.$result->HotelID);
+            Session::put('hotelId', ''.$result->HotelID);
 
-            Session::flash('CreatedByID', ''.$result->CreatedByID);
+            Session::put('CreatedByID', ''.$result->CreatedByID);
 
             return redirect('list-your-property/property-details/3/3');
         }

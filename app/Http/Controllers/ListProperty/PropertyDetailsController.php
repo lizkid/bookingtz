@@ -55,8 +55,6 @@ class PropertyDetailsController extends Controller
             'propertyCategoryId'=>$category,
             'createdById'=>$createdById,
             'streetAddress2'=>$sa2,
-            'districtId'=>'1',
-            'wardId'=>'2'
 
         ]);
 
@@ -67,14 +65,22 @@ class PropertyDetailsController extends Controller
         if ($result->resultcode == '01')
         {
 
-            Session::flash('alert-danger', ''.$result->result);
+            $error = json_encode($result->message);
+
+            Session::flash('alert-danger', ''.$error);
+
+            return back()->withInput();
         }
 
         else
         {
             Session::flash('alert-success', ''.$result->result);
 
-//            return redirect('list-your-property/property-services/$categoryId$starTypeId', );
+            return redirect('list-your-property/property-layout/3/3', );
+
+            Session::forget('hotelId', ''.$hotelId);
+
+            Session::forget('CreatedByID', ''.$createdById);
         }
     }
 }

@@ -29,20 +29,24 @@
                                     <h6 style="color: red;" id="error-input2"></h6>
                                 </div>
 
+                                <div>
+                                    @include('partial.flash.index')
+                                </div>
+
                                 <div class="form-row form-card">
 
                                     <div class="col-md-12 input-container mb-5">
                                         <div class="row row-container">
                                             <div class="col-md-6">
                                                 @if(\Illuminate\Support\Facades\Session::has('hotelId'))
-                                                    <input name="hotel_id" class="form-control" type="text" value="{{\Illuminate\Support\Facades\Session::get('hotelId')}}">
+                                                    <input name="hotel_id" class="form-control" type="hidden" value="{{\Illuminate\Support\Facades\Session::get('hotelId')}}">
                                                 @endif
 
                                             </div>
 
                                             <div class="col-md-6">
                                                 @if(\Illuminate\Support\Facades\Session::has('CreatedByID'))
-                                                    <input name="CreatedByID" class="form-control" type="text" value="{{\Illuminate\Support\Facades\Session::get('CreatedByID')}}">
+                                                    <input name="CreatedByID" class="form-control" type="hidden" value="{{\Illuminate\Support\Facades\Session::get('CreatedByID')}}">
                                                 @endif
 
                                             </div>
