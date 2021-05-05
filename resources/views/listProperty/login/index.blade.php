@@ -4,15 +4,18 @@
 @section('css')
 
     #fa-eye{
-    float: right;
     font-size: 25px;
     margin-top: -30px;
+    padding-bottom: 30px;
     cursor: pointer;
+    float: right;
     }
 
     #fa-eye i{
 
     color: #7a7c7d;
+    float: right;
+    padding: 0 10px;
     }
 
 
