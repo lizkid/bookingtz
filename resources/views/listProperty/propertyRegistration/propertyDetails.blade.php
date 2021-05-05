@@ -31,6 +31,19 @@
 
                                 <div class="form-row form-card">
 
+                                    <div class="col-md-6">
+                                        @if(\Illuminate\Support\Facades\Session::has('hotelId'))
+                                            <input name="hotel_id" class="form-control" type="text" value="{{\Illuminate\Support\Facades\Session::get('hotelId')}}">
+                                        @endif
+
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        @if(\Illuminate\Support\Facades\Session::has('CreatedByID'))
+                                            <input name="CreatedByID" class="form-control" type="text" value="{{\Illuminate\Support\Facades\Session::get('CreatedByID')}}">
+                                        @endif
+
+                                    </div>
 
                                     <div class="col-md-12 mb-3">
                                         <label>Country</label>
@@ -40,6 +53,16 @@
                                                 <option value="{{$row->CountryID}}">{{$row->CountryName}}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <label>Contact Full Name</label>
+                                        <input type="text" name="contactFName" class="form-control">
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <label>Contact Phone</label>
+                                        <input type="text" name="contactPhone" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3">

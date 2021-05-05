@@ -33,7 +33,7 @@
 
                                     <div class="col-md-12 mb-3">
                                         <label>Room Type</label>
-                                        <select name="fname[]" class="form-control">
+                                        <select id="room_type" name="room_type" class="form-control">
                                             <option selected disabled>--select room type--</option>
                                             <option value="Royal Suite">Single</option>
                                             <option value="1 King Bed">Double</option>
@@ -42,23 +42,27 @@
                                         </select>
                                     </div>
 
-                                    <div class="col-md-12 mb-3">
-                                        <label>Room Name</label>
-                                        <select name="bed" class="form-control">
-                                            <option selected disabled>--select room type--</option>
-                                            <option value="Presidential Suite">Presidential Suite</option>
-                                            <option value="Royal Suite">Royal Suite</option>
-                                            <option value="1 King Bed">One King Bed </option>
-                                            <option value="2 Kings Bed">Two Kings Bed</option>
-                                            <option value="1 King Bed Sea View">One King Bed Sea View </option>
-                                            <option value="2 Kings Bed Sea View">Two Kings Bed Sea View</option>
+                                    <div id="room_name_container" class="col-md-12">
+                                        <div class="row">
+                                            <div  class="col-md-6 mb-3">
+                                                <label>Room Name</label>
+                                                <select name="room_name" class="form-control">
+                                                    <option selected disabled>--select room type--</option>
+                                                    <option value="Presidential Suite">Presidential Suite</option>
+                                                    <option value="Royal Suite">Royal Suite</option>
+                                                    <option value="1 King Bed">One King Bed </option>
+                                                    <option value="2 Kings Bed">Two Kings Bed</option>
+                                                    <option value="1 King Bed Sea View">One King Bed Sea View </option>
+                                                    <option value="2 Kings Bed Sea View">Two Kings Bed Sea View</option>
 
-                                        </select>
-                                    </div>
+                                                </select>
+                                            </div >
 
-                                    <div class="col-md-12 mb-3">
-                                        <label>Room Code</label>
-                                        <input  type="text" name="lname" class="form-control" >
+                                            <div class="col-md-6 mb-3">
+                                                <label>Room Code</label>
+                                                <input  type="text" name="lname" class="form-control" >
+                                            </div>
+                                        </div>
                                     </div>
 
 
@@ -144,4 +148,16 @@
 
 @section('js')
 
+    <script>
+        $(document).ready(function (){
+
+            $("#room_name_container").hide()
+
+            $("#room_type").change(function (){
+
+                $("#room_name_container").show()
+            });
+
+        });
+    </script>
 @stop

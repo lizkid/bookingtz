@@ -13,6 +13,8 @@
 
             <div style="padding-left: 0!important; padding-right: 0!important;" class="col-md-8 mt-3">
 
+                @include('partial.flash.index')
+
                 <div>
 
                     <form action="{{url('list-your-property/property-registration/store')}}" method="post">
@@ -51,12 +53,12 @@
 
                                                     <div class="col-md-6">
                                                         <label>Yes</label>
-                                                        <input value="Yes" type="radio" name="multiple_location">
+                                                        <input value="1" type="radio" name="multiple_location">
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <label>No</label>
-                                                        <input value="No" type="radio" name="multiple_location">
+                                                        <input value="0" type="radio" name="multiple_location">
                                                     </div>
 
                                                 </div>

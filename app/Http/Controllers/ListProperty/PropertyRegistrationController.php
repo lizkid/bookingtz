@@ -5,6 +5,7 @@ namespace App\Http\Controllers\ListProperty;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Session;
 
 class PropertyRegistrationController extends Controller
 {
@@ -29,15 +30,13 @@ class PropertyRegistrationController extends Controller
 
     public function save(Request  $request)
     {
-        $api = bookingApi().'hotel/save?token='.token();
+        $api = bookingApi().'/hotel/save?token='.token();
 
         $hotel_name = $request->hotel_name;
 
         $full_name = $request->full_name;
 
         $m_location = $request->multiple_location;
-
-
 
         $result = Http::post($api, [
            'hotelName'=>$hotel_name,
@@ -50,14 +49,22 @@ class PropertyRegistrationController extends Controller
 
 //        dd($request->all());
 
-        if ($result)
+
+        if ($result->resultcode == '01')
         {
-            return "yes";
+            Session::flash('alert-danger', ''.$result->message);
+            return back();
         }
 
         else
         {
-            return  "no";
+            Session::flash('alert-success', ''.$result->result);
+
+            Session::flash('hotelId', ''.$result->HotelID);
+
+            Session::flash('CreatedByID', ''.$result->CreatedByID);
+
+            return redirect('list-your-property/property-details/3/3');
         }
 
     }

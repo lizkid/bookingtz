@@ -28,6 +28,11 @@
     <style>
         body{
             overflow-x: hidden;
+            background: #efecec;
+        }
+
+        input[type=checkbox], input[type=radio] {
+            transform: scale(1.5);
         }
 
         *{
@@ -112,6 +117,23 @@
             padding: 0;
         }
 
+        .navTab ul li{
+            background: #efeff1;
+            margin-left: 20px;
+        }
+
+        .navTab ul li a{
+            color: #242222;
+            text-align: center;
+            width: 150px;
+            font-size: 14px;
+            margin: 10px 0 10px 5px;
+        }
+
+        .navTab ul li a:hover{
+            color: #e2a043;
+        }
+
     </style>
     <style>@yield('css')</style>
 
@@ -127,11 +149,7 @@
 
             <nav class="navbar navbar-expand-lg">
 
-                <a class="navbar-brand" href="{{url('/')}}">Booking Tz</a>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                </button>
+                <a class="navbar-brand" >Booking Tz</a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
@@ -161,7 +179,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div  class="collapse navbar-collapse navTab" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="{{url('list-your-property/property-registration', [$categoryId, $starTypeId])}}">Property's Name <span class="sr-only">(current)</span></a>

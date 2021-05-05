@@ -5,6 +5,7 @@ namespace App\Http\Controllers\ListProperty;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Session;
 
 class PropertyDetailsController extends Controller
 {
@@ -28,6 +29,7 @@ class PropertyDetailsController extends Controller
     {
         $api = bookingApi().'/hotel/save-location?token='.token();
 
+        $hotelId = $request->hotel_id;
         $countrId = $request->country_id;
         $sub_country_id = $request->sub_country_id;
         $region_id = $request->region_id;
@@ -36,26 +38,43 @@ class PropertyDetailsController extends Controller
         $zip_code = $request->zip_code;
         $star = $request->star;
         $category = $request->category;
-        $createdById = $request->createdById;
+        $createdById = $request->CreatedByID;
+        $contactFName = $request->contactFName;
+        $contactPhone = $request->contactPhone;
 
         $result = Http::post($api, [
-            'hotelId'=>'1',
+            'hotelId'=>$hotelId,
            'countryId'=>$countrId,
             'regionId'=>$region_id,
             'streetAddress1'=>$sa1,
             'zipCode'=>$zip_code,
             'starTypeId'=>$star,
-            'contactPhone'=>'0766557778',
-            'contactFullName'=>'Juma Chagga',
+            'contactPhone'=>$contactPhone,
+            'contactFullName'=>$contactFName,
             'city'=>'Dar es salaam',
             'propertyCategoryId'=>$category,
-            'createdById'=>'2',
+            'createdById'=>$createdById,
             'streetAddress2'=>$sa2,
+            'districtId'=>'1',
+            'wardId'=>'2'
 
         ]);
 
         $result = json_decode($result);
 
-        dd($result);
+//        dd($result);
+
+        if ($result->resultcode == '01')
+        {
+
+            Session::flash('alert-danger', ''.$result->result);
+        }
+
+        else
+        {
+            Session::flash('alert-success', ''.$result->result);
+
+//            return redirect('list-your-property/property-services/$categoryId$starTypeId', );
+        }
     }
 }
