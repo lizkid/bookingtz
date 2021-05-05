@@ -217,8 +217,8 @@
                     <a class="nav-link" href="{{url('list-your-property/property-photos' , [$categoryId, $starTypeId])}}">Photos</a>
                 </li>
 
-                <li class="nav-item {{ Request::url() == url('/list-your-property/property-payments', [$categoryId, $starTypeId]) ? 'active' : '' }}">
-                    <a class="nav-link" href="{{url('list-your-property/property-payments' , [$categoryId, $starTypeId])}}">Payments</a>
+                <li class="nav-item {{ Request::url() == url('/list-your-property/property-payment', [$categoryId, $starTypeId]) ? 'active' : '' }}">
+                    <a class="nav-link" href="{{url('list-your-property/property-payment' , [$categoryId, $starTypeId])}}">Payments</a>
                 </li>
 
             </ul>

@@ -55,7 +55,7 @@
 
                                 </div>
 
-                                <input id="btn-2" type="submit" name="save" class="mt-3 btn btn-primary" value="Continue" />
+                                <input id="btn-2" type="submit" name="save" class="mt-3 btn btn-primary btn-block" value="Continue" />
 
                             </fieldset>
 
