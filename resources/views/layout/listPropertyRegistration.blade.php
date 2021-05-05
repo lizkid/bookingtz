@@ -16,9 +16,6 @@
     <!-- icons-->
     <script src="https://kit.fontawesome.com/f50cbe1cfd.js" crossorigin="anonymous"></script>
 
-    <!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     {{--    slick slider--}}
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- Add the slick-theme.css if you want default styling -->
@@ -33,6 +30,7 @@
 
         input[type=checkbox], input[type=radio] {
             transform: scale(1.5);
+            margin: 0 5px;
         }
 
         *{
@@ -105,7 +103,7 @@
         }
 
         form{
-            width: 60%;
+            width: 80%;
             margin: auto;
             display: block;
         }
@@ -130,8 +128,22 @@
             margin: 10px 0 10px 5px;
         }
 
+        .navTab ul li.active a{
+            color: #e2a043;
+            opacity: 1;
+        }
+
         .navTab ul li a:hover{
             color: #e2a043;
+        }
+
+        .input-container{
+            border: 1px solid #d4cfcf;
+            border-radius: 5px;
+        }
+
+        .row-container{
+            padding: 20px;
         }
 
     </style>
@@ -181,18 +193,18 @@
 
         <div  class="collapse navbar-collapse navTab" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
+                <li class="nav-item {{ Request::url() == url('/list-your-property/property-registration', [$categoryId, $starTypeId]) ? 'active' : '' }}">
                     <a class="nav-link" href="{{url('list-your-property/property-registration', [$categoryId, $starTypeId])}}">Property's Name <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{ Request::url() == url('/list-your-property/property-details', [$categoryId, $starTypeId]) ? 'active' : '' }}">
                     <a class="nav-link" href="{{url('list-your-property/property-details', [$categoryId, $starTypeId])}}">Property's Details</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item {{ Request::url() == url('/list-your-property/property-layout', [$categoryId, $starTypeId]) ? 'active' : '' }}">
                     <a class="nav-link" href="{{url('list-your-property/property-layout' , [$categoryId, $starTypeId])}}">Layout</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item {{ Request::url() == url('/list-your-property/property-services', [$categoryId, $starTypeId]) ? 'active' : '' }}">
                     <a class="nav-link" href="{{url('list-your-property/property-services' , [$categoryId, $starTypeId])}}">Services</a>
                 </li>
 

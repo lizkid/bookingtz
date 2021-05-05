@@ -31,63 +31,73 @@
 
                                 <div class="form-row form-card">
 
-                                    <div class="col-md-6 mb-3">
-                                        <label>Breakfast</label>
-                                        <select name="fname[]" class="form-control">
-                                            <option value="1 King Bed">Yes</option>
-                                            <option value="2 Kings Bed">No</option>
+                                    <div class="col-md-12 mb-5 input-container">
+                                        <div class="row row-container">
+                                            <div class="col-md-6 mb-3">
+                                                <label>Breakfast</label>
+                                                <select name="fname[]" class="form-control">
+                                                    <option value="1 King Bed">Yes</option>
+                                                    <option value="2 Kings Bed">No</option>
 
-                                        </select>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-6 mb-3">
+                                                <label>Parking</label>
+                                                <select name="fname[]" class="form-control">
+                                                    <option value="1 King Bed">Yes</option>
+                                                    <option value="2 Kings Bed">No</option>
+
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-6 mb-3">
+                                                <label>Language spoken </label>
+                                                <select name="fname[]" class="form-control">
+                                                    <option value="1 King Bed">Swahili</option>
+                                                    <option value="2 Kings Bed">English</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="col-md-6 mb-3">
-                                        <label>Parking</label>
-                                        <select name="fname[]" class="form-control">
-                                            <option value="1 King Bed">Yes</option>
-                                            <option value="2 Kings Bed">No</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <label>Language spoken </label>
-                                        <select name="fname[]" class="form-control">
-                                            <option value="1 King Bed">Swahili</option>
-                                            <option value="2 Kings Bed">English</option>
-
-                                        </select>
-                                    </div>
 
 
+                                    <div class="col-md-12 mb-5 input-container">
 
-                                    <div class="col-md-12 mb-3">
-                                        <label>Facilities available at the hotel</label>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
-                                                <label>Spa</label>
-                                            </div>
+                                        <div class="row row-container">
+                                            <div class="col-md-12">
+                                                <label>Facilities available at the hotel</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Spa</label>
+                                                    </div>
 
-                                            <div class="col-md-6">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
-                                                <label>Free Wifi</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
-                                                <label>Swimming Pool</label>
-                                            </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Free Wifi</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Swimming Pool</label>
+                                                    </div>
 
-                                            <div class="col-md-6">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
-                                                <label>Bar</label>
-                                            </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Bar</label>
+                                                    </div>
 
-                                            <div class="col-md-6">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
-                                                <label>Air Conditioning</label>
-                                            </div>
-                                            <div class="col-md-6" aria-label="Checkbox for following text input">
-                                                <label>Smoking Zone</label>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Air Conditioning</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Smoking Zone</label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -96,7 +106,7 @@
 
                                 </div>
 
-                                <input id="btn-2" type="submit" name="save" class="mt-3 btn btn-primary" value="Continue" />
+                                <input id="btn-2" type="submit" name="save" class="mt-3 btn btn-block btn-primary" value="Continue" />
 
                             </fieldset>
 

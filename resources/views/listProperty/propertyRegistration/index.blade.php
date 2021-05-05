@@ -9,9 +9,9 @@
 
     <div class="container pb-3">
 
-        <div class="row mt-3">
+        <div class="row">
 
-            <div style="padding-left: 0!important; padding-right: 0!important;" class="col-md-8 mt-3">
+            <div style="padding-left: 0!important; padding-right: 0!important;" class="col-md-8">
 
                 @include('partial.flash.index')
 
@@ -27,7 +27,7 @@
 
                                 <div class="form-card">
 
-                                    <h3 class="py-2"><strong style="color: #636363;"> Tell us your property's name</strong></h3>
+                                    <h3 class="py-2"><strong style="color: #636363;">Property's name</strong></h3>
 
                                     <div id="book-details">
                                         <div>
@@ -35,32 +35,36 @@
                                         </div>
                                         <div class="form-row">
 
-                                            <div class="form-group col-md-12">
-                                                <label>Hotel Name</label><span style="color:red;">*</span>
-                                                <input type="text" class="form-control" name="hotel_name">
-                                            </div>
-
-                                            <div class="form-group col-md-12">
-                                                <label>Owner's Full Name</label><span style="color:red;">*</span>
-                                                <input type="text" class="form-control" name="full_name">
-                                            </div>
-
-                                            <div class="col-md-12">
-
-                                                <label>Does this property has multiple location</label>
-
-                                                <div class="row">
-
-                                                    <div class="col-md-6">
-                                                        <label>Yes</label>
-                                                        <input value="1" type="radio" name="multiple_location">
+                                            <div class="col-md-12 input-container mb-5">
+                                                <div class="row row-container">
+                                                    <div class="form-group col-md-12">
+                                                        <label>Hotel Name</label><span style="color:red;">*</span>
+                                                        <input type="text" class="form-control" name="hotel_name">
                                                     </div>
 
-                                                    <div class="col-md-6">
-                                                        <label>No</label>
-                                                        <input value="0" type="radio" name="multiple_location">
+                                                    <div class="form-group col-md-12">
+                                                        <label>Owner's Full Name</label><span style="color:red;">*</span>
+                                                        <input type="text" class="form-control" name="full_name">
                                                     </div>
 
+                                                    <div class="col-md-12">
+
+                                                        <label>Does this property has multiple location</label>
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-6">
+                                                                <label>Yes</label>
+                                                                <input value="1" type="radio" name="multiple_location">
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <label>No</label>
+                                                                <input value="0" type="radio" name="multiple_location">
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -69,7 +73,7 @@
                                     </div>
 
                                 </div>
-                                <input id="btn-1" type="submit" name="save" class="btn btn-primary mt-3" value="Save" />
+                                <input id="btn-1" type="submit" name="save" class="btn btn-primary btn-block mt-3" value="Save" />
 
                             </fieldset>
 

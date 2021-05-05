@@ -86,11 +86,7 @@
 
 
 @section('js')
-    <script>
-        $(document).ready(function (){
-            $('.toast').toast('show');
-        });
-    </script>
+
     <script>
         $(document).ready(function(){
 

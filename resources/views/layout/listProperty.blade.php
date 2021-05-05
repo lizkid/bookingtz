@@ -1,4 +1,3 @@
-<!
 <html>
 <head>
     <meta charset="UTF-8">
@@ -15,19 +14,6 @@
 
     <!-- icons-->
     <script src="https://kit.fontawesome.com/f50cbe1cfd.js" crossorigin="anonymous"></script>
-
-    <!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    {{--    slick slider--}}
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
-    {{--    main css--}}
-{{--    <link rel="stylesheet" href="{{asset('resources/css/style.css')}}">--}}
-
-{{--    <link rel="stylesheet" href="{{asset('resources/css/topBarContent.css')}}">--}}
 
 
     <style>
@@ -102,6 +88,10 @@
 
         h4{
             font-size: 16px;
+        }
+
+        a:hover{
+            text-decoration: none;
         }
 
     </style>

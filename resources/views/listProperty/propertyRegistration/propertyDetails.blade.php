@@ -31,82 +31,89 @@
 
                                 <div class="form-row form-card">
 
-                                    <div class="col-md-6">
-                                        @if(\Illuminate\Support\Facades\Session::has('hotelId'))
-                                            <input name="hotel_id" class="form-control" type="text" value="{{\Illuminate\Support\Facades\Session::get('hotelId')}}">
-                                        @endif
+                                    <div class="col-md-12 input-container mb-5">
+                                        <div class="row row-container">
+                                            <div class="col-md-6">
+                                                @if(\Illuminate\Support\Facades\Session::has('hotelId'))
+                                                    <input name="hotel_id" class="form-control" type="text" value="{{\Illuminate\Support\Facades\Session::get('hotelId')}}">
+                                                @endif
 
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                @if(\Illuminate\Support\Facades\Session::has('CreatedByID'))
+                                                    <input name="CreatedByID" class="form-control" type="text" value="{{\Illuminate\Support\Facades\Session::get('CreatedByID')}}">
+                                                @endif
+
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <label>Contact Full Name</label>
+                                                <input type="text" name="contactFName" class="form-control">
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <label>Contact Phone</label>
+                                                <input type="text" name="contactPhone" class="form-control">
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="col-md-6">
-                                        @if(\Illuminate\Support\Facades\Session::has('CreatedByID'))
-                                            <input name="CreatedByID" class="form-control" type="text" value="{{\Illuminate\Support\Facades\Session::get('CreatedByID')}}">
-                                        @endif
+                                    <div class="col-md-12 input-container">
+                                        <div class="row row-container">
+                                            <div class="col-md-12 mb-3">
+                                                <label>Country</label>
+                                                <select id="country_change" name="country_id" class="form-control">
+                                                    <option selected disabled>--select-country--</option>
+                                                    @foreach($countries->countries as $row)
+                                                        <option value="{{$row->CountryID}}">{{$row->CountryName}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
 
+                                            <div class="col-md-12 mb-3">
+                                                <label>Sub Country</label>
+                                                <select id="sub_country_id" name="sub_country_id" class="form-control">
+
+                                                </select>
+                                            </div>
+
+
+                                            <div class="col-md-12 mb-3">
+                                                <label>Region</label>
+                                                <select id="region_id" name="region_id" class="form-control">
+
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-6 mb-3">
+                                                <label>Street Address</label>
+                                                <input type="text" name="sa1" class="form-control">
+                                            </div>
+
+                                            <div class="col-md-6 mb-3">
+                                                <label>Street Address 2</label>
+                                                <input type="text" name="sa2" class="form-control">
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <label>Zip Code</label>
+                                                <input type="text" name="zip_code" class="form-control">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <input value="{{$starTypeId}}" type="hidden" name="star" class="form-control">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <input value="{{$categoryId}}" type="hidden" name="category" class="form-control">
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <div class="col-md-12 mb-3">
-                                        <label>Country</label>
-                                        <select id="country_change" name="country_id" class="form-control">
-                                            <option selected disabled>--select-country--</option>
-                                            @foreach($countries->countries as $row)
-                                                <option value="{{$row->CountryID}}">{{$row->CountryName}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <label>Contact Full Name</label>
-                                        <input type="text" name="contactFName" class="form-control">
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <label>Contact Phone</label>
-                                        <input type="text" name="contactPhone" class="form-control">
-                                    </div>
-
-                                    <div class="col-md-12 mb-3">
-                                        <label>Sub Country</label>
-                                        <select id="sub_country_id" name="sub_country_id" class="form-control">
-
-                                        </select>
-                                    </div>
-
-
-                                    <div class="col-md-12 mb-3">
-                                        <label>Region</label>
-                                        <select id="region_id" name="region_id" class="form-control">
-
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label>Street Address</label>
-                                        <input type="text" name="sa1" class="form-control">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label>Street Address 2</label>
-                                        <input type="text" name="sa2" class="form-control">
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <label>Zip Code</label>
-                                        <input type="text" name="zip_code" class="form-control">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <input value="{{$starTypeId}}" type="hidden" name="star" class="form-control">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <input value="{{$categoryId}}" type="hidden" name="category" class="form-control">
-                                    </div>
-
 
                                 </div>
 
-                                <input id="btn-2" type="submit" name="save" class="mt-3 btn btn-primary" value="Continue" />
+                                <input id="btn-2" type="submit" name="save" class="mt-3 btn btn-block btn-primary" value="Continue" />
 
                             </fieldset>
 

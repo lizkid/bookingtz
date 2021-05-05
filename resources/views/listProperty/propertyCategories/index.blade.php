@@ -20,9 +20,6 @@
 
                     <h4>Choose property category for your place</h4>
 
-{{--                    @if(\Illuminate\Support\Facades\Session::has('jina'))--}}
-{{--                        <p>{{\Illuminate\Support\Facades\Session::get('jina')}}</p>--}}
-{{--                    @endif--}}
                     <div>
                         <div class="row">
                             @foreach($category->results as $row)
@@ -30,7 +27,7 @@
                                     <a href="{{url('list-your-property/propertyCategories/star-type',[$row->ID])}}">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h4>{{$row->PropertyCategory}}</h4>
+                                                <h4 style="padding: 20px;">{{$row->PropertyCategory}}</h4>
                                             </div>
                                         </div>
                                     </a>

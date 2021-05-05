@@ -3,6 +3,19 @@
 
 @section('css')
 
+    #fa-eye{
+    float: right;
+    font-size: 25px;
+    margin-top: -30px;
+    cursor: pointer;
+    }
+
+    #fa-eye i{
+
+    color: #7a7c7d;
+    }
+
+
 @stop
 
 @section('content')
@@ -35,7 +48,7 @@
 
                                 <div class="col-md-12 mb-3">
                                     <label>Password</label><span class="star">*</span>
-                                    <input  type="password" name="password" class="form-control" >
+                                    <input id="password"  type="password" name="password" class="form-control" ><span id="fa-eye"></span>
                                 </div>
 
                             </div>
@@ -51,4 +64,29 @@
 
     </div>
 
+@stop
+
+@section('js')
+
+    <script>
+        $(document).ready(function (){
+
+            $('#fa-eye').html('<i class="fas fa-eye"></i>');
+
+
+            $('#fa-eye').click(function (){
+
+                if ($('#password').attr('type') == 'text') {
+                    $('#password').attr('type', 'password');
+                    $('#fa-eye').html('');
+                    $('#fa-eye').html('<i class="fas fa-eye"></i>');
+                } else {
+                    $('#fa-eye').html('<i class="fas fa-eye-slash"></i>');
+                    $('#password').attr('type', 'text');
+                }
+            });
+        });
+
+
+    </script>
 @stop
