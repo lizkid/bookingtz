@@ -1,0 +1,189 @@
+#language-header h4{
+    margin: 10px 0;
+    opacity: 0.8;
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+#language-header h4 i{
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 24px;
+}
+
+#language div{
+    cursor: pointer;
+}
+
+#language div:hover{
+    background: #eae9e9;
+}
+
+#language div p{
+    margin-top: 15px;
+    display: block;
+    color: #000000 ;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+#language div p span img{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+/*currency*/
+
+#currency-header h4{
+    margin: 10px 0;
+    opacity: 0.8;
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+#currency-header h4 i{
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 24px;
+}
+
+#currency div{
+    cursor: pointer;
+}
+
+#currency div:hover{
+    background: #eae9e9;
+}
+
+#currency div p{
+    margin-top: 15px;
+    display: block;
+    color: #000000 ;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+#currency div p span img{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+.modal-header{
+    background: #080a1d;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 60px;
+    color: gray;
+    opacity: 0.8;
+
+}
+
+.modal-header h5, .modal-header button span{
+    opacity: 0.8;
+    color: whitesmoke;
+}
+
+#auth-close{
+    outline: none!important;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+}
+
+#auth-close:hover{
+    background: #bfbebc45!important;
+}
+
+#form-group input:focus{
+    box-shadow: inset 0 1px 1px rgba(0 0 0 / 8%), 0 0 8px rgba(102 175 233 / 60%)!important;
+    background: white!important;
+}
+
+#web-name div{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    justify-content: start;
+}
+
+
+#web-name div p{
+    font-size: 14px;
+    background: #f2851c;
+    color: white;
+    padding: 2px;
+    margin-left: 2px;
+    width: 20px;
+    text-align: center;
+}
+
+#label{
+    font-size: 13px;
+    color: #434242;
+}
+
+#star{
+    color: red;
+}
+
+#register{
+    border-radius: 0px;
+}
+
+#forgot{
+    padding: 5px;
+    color: #3552ca !important;
+    opacity: 1;
+    float: right;
+    margin-right: auto;
+}
+
+#no-acc{
+    margin-top: 5px;
+    padding-top: 20px;
+    border-top: 1px solid #a99c9c;
+}
+
+#no-acc a{
+    margin: 0;
+    padding: 0;
+    color: #3552ca !important;
+    opacity: 1;
+}
+
+#forgot:hover, #no-acc a:hover{
+    border-top: unset!important;
+    color: #475bac !important;
+}
+
+#have-acc{
+    margin-top: 5px;
+    padding-top: 20px;
+    border-top: 1px solid #a99c9c;
+}
+
+#have-acc a{
+    margin: 0;
+    padding: 0;
+    color: #3552ca !important;
+    opacity: 1;
+}
+
+#have-acc a:hover{
+    border-top: unset!important;
+}
+
+@media (min-width: 576px)
+{
+    .modal-dialog {
+        max-width: 1000px;
+        margin: 1.75rem auto;
+    }
+}

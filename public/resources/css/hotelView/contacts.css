@@ -1,0 +1,64 @@
+#presidential-amenities, #royal-amenities, #king-bed-amenities, #kings-bed-amenities, #king-bed-sea-amenities, #kings-bed-sea-amenities{
+    display: none;
+}
+
+#royal-btn, #presidential-btn, #king-bed-btn, #kings-bed-btn, #king-bed-sea-btn, #kings-bed-sea-btn{
+    background: #0d0d0d;
+    color: #f68721;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#royal-btn:hover, #presidential-btn:hover, #king-bed-btn:hover, #kings-bed-btn:hover, #king-bed-sea-btn:hover, #kings-bed-sea-btn:hover{
+    background: #f68721;
+    color: white;
+}
+
+#map{
+    height: 400px;
+    width: 100%;
+}
+
+form label{
+    font-size: 14px;
+    color: #767575
+}
+
+form label span{
+    color: #f2851c;
+}
+
+.form-control{
+    border: 1px solid #acacaf!important;
+    border-radius: 0!important;
+    font-size: 14px!important;
+}
+
+.form-control:focus{
+    box-shadow: unset !important;
+    border: 1px solid #acacaf!important;
+}
+
+#contact-submit{
+    background: #167657;
+    color: #fae8d8;
+    border: 1px solid #167657;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    border-radius: 0;
+}
+
+#contact-submit:hover, #contact-submit:focus{
+    background: #167657;
+    color: #fae8d8;
+    border: 1px solid #167657;
+    outline: #167657;
+    box-shadow: unset;
+    opacity: 0.8;
+}

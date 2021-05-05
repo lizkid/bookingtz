@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+    background: #f1f1f1;
+}
+
+.bg-light{
+    background: #1d2836 !important;
+}
+
+#nav-content{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+.navbar-nav li{
+    padding: 0 20px;
+    border-right: 1px solid #424141;
+}
+
+.navbar-nav li:last-child{
+    border-right: unset;
+}
+
+.navbar-nav li a{
+    color:  #a59d88!important;
+    text-transform: uppercase;
+    padding: 0!important;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a{
+
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    color: #e5b433 !important;
+    border-bottom: 2px dotted #e3b732;
+
+}
+
+.navbar-brand{
+    color: #e5b433 !important;
+    font-family: "Sofia", sans-serif
+}
+
+
+/*.navbar-nav li a:before {*/
+/*    display: block;*/
+/*    content:'';*/
+/*    border-top: 2px dotted #e3b732;*/
+/*    -webkit-transform: scaleX(0.0001);*/
+/*    -ms-transform: scaleX(0.0001);*/
+/*    transform: scaleX(0.0001);*/
+/*    -webkit-transition: -webkit-transform 250ms ease-in-out;*/
+/*    transition: transform 250ms ease-in-out;*/
+/*}*/
+
+
+/*.navbar-nav li a:hover:before {*/
+/*    -webkit-transform: scaleX(1);*/
+/*    -ms-transform: scaleX(1);*/
+/*    transform: scaleX(1);*/
+/*}*/
+
+#book-btn{
+    background: #e5b433;
+    cursor: pointer;
+    border: #e5b433;
+    outline: #e5b433;
+    border-radius: 0px;
+    width: 180px;
+    font-size: 20px;
+}
+
+#book-btn:hover, #book-btn:focus{
+    box-shadow: unset;
+    opacity: 0.8;
+    border: #e0b449;
+
+}
+
+.carousel-item img{
+    height: 90vh;
+}
+
+.card{
+    border: unset;
+    background: #ebe8e2;
+}
+
+h5{
+    color: #f68721;
+}
+
+p{
+    color: black!important;
+    opacity: 0.7;
+}
+
+
