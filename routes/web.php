@@ -38,6 +38,7 @@ use App\Http\Controllers\ListProperty\PropertyRegistrationController;
 use App\Http\Controllers\ListProperty\PropertyDetailsController;
 use App\Http\Controllers\ListProperty\LayoutController;
 use App\Http\Controllers\ListProperty\ServicesController;
+use App\Http\Controllers\ListProperty\AmenityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -218,6 +219,11 @@ Route::group(['prefix'=>'list-your-property'], function (){
        Route::group(['prefix'=>'property-services'], function (){
            Route::get('/{categoryId}/{starTypeId}', [ServicesController::class, 'index']);
            Route::post('/store', [ServicesController::class, 'save']);
+       });
+
+       Route::group(['prefix'=>'property-amenities'], function (){
+           Route::get('/{categoryId}/{starTypeId}', [AmenityController::class, 'index']);
+           Route::post('/store', [AmenityController::class, 'save']);
        });
 
        Route::group(['prefix'=>'helper'], function (){

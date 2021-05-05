@@ -140,6 +140,7 @@
         .input-container{
             border: 1px solid #d4cfcf;
             border-radius: 5px;
+            /*background: #fff;*/
         }
 
         .row-container{
@@ -208,16 +209,16 @@
                     <a class="nav-link" href="{{url('list-your-property/property-services' , [$categoryId, $starTypeId])}}">Services</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Amenities</a>
+                <li class="nav-item {{ Request::url() == url('/list-your-property/property-amenities', [$categoryId, $starTypeId]) ? 'active' : '' }}">
+                    <a class="nav-link" href="{{url('list-your-property/property-amenities' , [$categoryId, $starTypeId])}}">Amenities</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Photos</a>
+                <li class="nav-item {{ Request::url() == url('/list-your-property/property-photos', [$categoryId, $starTypeId]) ? 'active' : '' }}">
+                    <a class="nav-link" href="{{url('list-your-property/property-photos' , [$categoryId, $starTypeId])}}">Photos</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Payments</a>
+                <li class="nav-item {{ Request::url() == url('/list-your-property/property-payments', [$categoryId, $starTypeId]) ? 'active' : '' }}">
+                    <a class="nav-link" href="{{url('list-your-property/property-payments' , [$categoryId, $starTypeId])}}">Payments</a>
                 </li>
 
             </ul>

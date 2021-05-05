@@ -24,7 +24,8 @@
 
                             <fieldset>
 
-                                <h3 class="py-2"><strong style="color: #636363;">Layout and Pricing</strong></h3>
+                                <h3 class="py-2"><strong style="color: #636363;">Amenities</strong></h3>
+                                <p>What comes with your home?</p>
 
                                 <div class="pt-3">
                                     <h6 style="color: red;" id="error-input2"></h6>
@@ -35,43 +36,74 @@
                                     <div class="col-md-12 mb-5 input-container">
                                         <div class="row row-container">
                                             <div class="col-md-12 mb-3">
-                                                <label>Room Type</label>
-                                                <select id="room_type" name="room_type" class="form-control">
-                                                    <option selected disabled>--select room type--</option>
-                                                    <option value="Royal Suite">Single</option>
-                                                    <option value="1 King Bed">Double</option>
-                                                    <option value="2 Kings Bed">Twin</option>
-
-                                                </select>
-                                            </div>
-
-                                            <div id="room_name_container" class="col-md-12">
+                                                <h4>Standard</h4>
                                                 <div class="row">
-                                                    <div  class="col-md-6 mb-3">
-                                                        <label>Room Name</label>
-                                                        <select name="room_name" class="form-control">
-                                                            <option selected disabled>--select room type--</option>
-                                                            <option value="Presidential Suite">Presidential Suite</option>
-                                                            <option value="Royal Suite">Royal Suite</option>
-                                                            <option value="1 King Bed">One King Bed </option>
-                                                            <option value="2 Kings Bed">Two Kings Bed</option>
-                                                            <option value="1 King Bed Sea View">One King Bed Sea View </option>
-                                                            <option value="2 Kings Bed Sea View">Two Kings Bed Sea View</option>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Spa</label>
+                                                    </div>
 
-                                                        </select>
-                                                    </div >
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Free Wifi</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Swimming Pool</label>
+                                                    </div>
 
-                                                    <div class="col-md-6 mb-3">
-                                                        <label>Room Code</label>
-                                                        <input  type="text" name="lname" class="form-control" >
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Bar</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Air Conditioning</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Smoking Zone</label>
                                                     </div>
                                                 </div>
                                             </div>
 
+                                        </div>
+                                    </div>
 
+                                    <div class="col-md-12 mb-5 input-container">
+                                        <div class="row row-container">
                                             <div class="col-md-12 mb-3">
-                                                <label>Number of rooms (for selected type)</label>
-                                                <input  type="text" name="lname" class="form-control" >
+                                                <h4>Entertainment</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Spa</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Free Wifi</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Swimming Pool</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Bar</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Air Conditioning</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Smoking Zone</label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -79,69 +111,224 @@
                                     <div class="col-md-12 mb-5 input-container">
                                         <div class="row row-container">
                                             <div class="col-md-12 mb-3">
-                                                <label>Beds available in this room</label>
-                                                <select name="bed" class="form-control">
-                                                    <option selected disabled>--select room type--</option>
-                                                    <option value="Presidential Suite">Presidential Suite</option>
-                                                    <option value="Royal Suite">Royal Suite</option>
-                                                    <option value="1 King Bed">One King Bed </option>
-                                                    <option value="2 Kings Bed">Two Kings Bed</option>
-                                                    <option value="1 King Bed Sea View">One King Bed Sea View </option>
-                                                    <option value="2 Kings Bed Sea View">Two Kings Bed Sea View</option>
+                                                <h4>Access</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Spa</label>
+                                                    </div>
 
-                                                </select>
-                                            </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Free Wifi</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Swimming Pool</label>
+                                                    </div>
 
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Bar</label>
+                                                    </div>
 
-                                            <div class="col-md-12 mb-3">
-                                                <label>Number Of Beds</label>
-                                                <select class="form-control">
-                                                    <option selected disabled>--select number of beds--</option>
-                                                    <option>1 Bed</option>
-                                                    @for($x=2; $x<=4; $x++)
-
-                                                        <option value="{{$x}}">{{$x}} Beds</option>
-
-                                                    @endfor
-                                                </select>
-                                            </div>
-
-                                            <div class="col-md-12 mb-3">
-                                                <label>Number of guests the selected room can  hold</label>
-                                                <select class="form-control">
-                                                    @for($x=1; $x<=4; $x++)
-
-                                                        <option value="{{$x}}">{{$x}} </option>
-
-                                                    @endfor
-                                                </select>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Air Conditioning</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Smoking Zone</label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-12 input-container">
+                                    <div class="col-md-12 mb-5 input-container">
                                         <div class="row row-container">
                                             <div class="col-md-12 mb-3">
-                                                <label>Room size (square meters)</label>
-                                                <input  type="text" name="lname" class="form-control" >
-                                            </div>
+                                                <h4>Kitchen</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Spa</label>
+                                                    </div>
 
-                                            <div class="col-md-12 mb-3">
-                                                <label>Room Description</label>
-                                                <textarea class="form-control">
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Free Wifi</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Swimming Pool</label>
+                                                    </div>
 
-                                        </textarea>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Bar</label>
+                                                    </div>
 
-                                            </div>
-
-                                            <div class="col-md-12 mb-3">
-                                                <h4>Add Price for one night for the selected room</h4>
-                                                <label>Price for one person </label>
-                                                <input  type="text" name="lname" class="form-control" >
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Air Conditioning</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Smoking Zone</label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
+                                    <div class="col-md-12 mb-5 input-container">
+                                        <div class="row row-container">
+                                            <div class="col-md-12 mb-3">
+                                                <h4>Bathroom</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Spa</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Free Wifi</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Swimming Pool</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Bar</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Air Conditioning</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Smoking Zone</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-5 input-container">
+                                        <div class="row row-container">
+                                            <div class="col-md-12 mb-3">
+                                                <h4>Safety and Cleanliness</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Spa</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Free Wifi</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Swimming Pool</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Bar</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Air Conditioning</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Smoking Zone</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-5 input-container">
+                                        <div class="row row-container">
+                                            <div class="col-md-12 mb-3">
+                                                <h4>Family</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Spa</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Free Wifi</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Swimming Pool</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Bar</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Air Conditioning</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Smoking Zone</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-5 input-container">
+                                        <div class="row row-container">
+                                            <div class="col-md-12 mb-3">
+                                                <h4>Other</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Spa</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Free Wifi</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Swimming Pool</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Bar</label>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Air Conditioning</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                                        <label>Smoking Zone</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
 
@@ -172,16 +359,4 @@
 
 @section('js')
 
-    <script>
-        $(document).ready(function (){
-
-            $("#room_name_container").hide()
-
-            $("#room_type").change(function (){
-
-                $("#room_name_container").show()
-            });
-
-        });
-    </script>
 @stop
