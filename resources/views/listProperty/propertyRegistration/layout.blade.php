@@ -43,13 +43,33 @@
                                     </div>
 
                                     <div class="col-md-12 mb-3">
+                                        <label>Room Name</label>
+                                        <select name="bed" class="form-control">
+                                            <option selected disabled>--select room type--</option>
+                                            <option value="Presidential Suite">Presidential Suite</option>
+                                            <option value="Royal Suite">Royal Suite</option>
+                                            <option value="1 King Bed">One King Bed </option>
+                                            <option value="2 Kings Bed">Two Kings Bed</option>
+                                            <option value="1 King Bed Sea View">One King Bed Sea View </option>
+                                            <option value="2 Kings Bed Sea View">Two Kings Bed Sea View</option>
+
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label>Room Code</label>
+                                        <input  type="text" name="lname" class="form-control" >
+                                    </div>
+
+
+                                    <div class="col-md-12 mb-3">
                                         <label>Number of rooms (for selected type)</label>
                                         <input  type="text" name="lname" class="form-control" >
                                     </div>
 
                                     <div class="col-md-12 mb-3">
                                         <label>Beds available in this room</label>
-                                        <select name="fname[]" class="form-control">
+                                        <select name="bed" class="form-control">
                                             <option selected disabled>--select room type--</option>
                                             <option value="Presidential Suite">Presidential Suite</option>
                                             <option value="Royal Suite">Royal Suite</option>
