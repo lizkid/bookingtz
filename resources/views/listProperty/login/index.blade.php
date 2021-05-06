@@ -28,11 +28,11 @@
         <div class="row mt-3">
             <div class="col-md-12 pt-3 mt-3 mb-3">
 
-                <div style="width: 35%; margin: auto; ">
+                <div style="width: 70%; margin: auto; " class="text-center">
+                    @include('partial.flash.index')
+                </div>
 
-                    <div class="text-center">
-                        @include('partial.flash.index')
-                    </div>
+                <div style="width: 35%; margin: auto; ">
 
                     <h4 class="text-center">Login to manage your property</h4>
                     <form id="msform"  action="{{url('list-your-property/login')}}" method="post">
@@ -46,17 +46,17 @@
 
                                 <div class="col-md-12 mb-3">
                                     <label>Email</label><span class="star">*</span>
-                                    <input  type="email" name="email" class="form-control">
+                                    <input  type="login_email" name="email" class="form-control">
                                 </div>
 
                                 <div class="col-md-12 mb-3">
                                     <label>Password</label><span class="star">*</span>
-                                    <input id="password"  type="password" name="password" class="form-control" ><span id="fa-eye"></span>
+                                    <input id="login_pass"  type="password" name="password" class="form-control" ><span id="fa-eye"></span>
                                 </div>
 
                             </div>
 
-                            <input id="btn-2" type="submit" name="next" class="next action-button btn-block btn-block btn btn-primary" value="Login" />
+                            <input id="login_btn" type="submit" name="next" class="next action-button btn-block btn-block btn btn-primary" value="Login" />
 
                         </fieldset>
                     </form>
@@ -74,22 +74,45 @@
     <script>
         $(document).ready(function (){
 
-            $('#fa-eye').html('<i class="fas fa-eye"></i>');
+            $('#fa-eye').html('<i class="fas fa-eye-slash"></i>');
 
 
             $('#fa-eye').click(function (){
 
-                if ($('#password').attr('type') == 'text') {
-                    $('#password').attr('type', 'password');
+                if ($('#login_pass').attr('type') == 'text') {
+                    $('#login_pass').attr('type', 'password');
                     $('#fa-eye').html('');
-                    $('#fa-eye').html('<i class="fas fa-eye"></i>');
-                } else {
                     $('#fa-eye').html('<i class="fas fa-eye-slash"></i>');
-                    $('#password').attr('type', 'text');
+                } else {
+                    $('#fa-eye').html('<i class="fas fa-eye"></i>');
+                    $('#login_pass').attr('type', 'text');
                 }
             });
+
+
         });
 
 
+    </script>
+
+    <script>
+        $(document).ready(function (){
+
+            $("#login_btn").click(function (e){
+
+                let pass = $("#login_pass").val();
+
+                let email = $("#login-email").val();
+
+                if (email == '' && pass == '')
+                {
+
+                    e.preventDefault();
+
+                    $("#error-input2").text('Please fill all the required fields')
+                }
+            });
+
+        });
     </script>
 @stop

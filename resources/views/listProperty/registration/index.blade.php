@@ -28,10 +28,11 @@
         <div class="row mt-3">
             <div class="col-md-12 pt-3 mt-3 mb-3">
 
+                <div style="width: 70%; margin: auto; " class="text-center">
+                    @include('partial.flash.index')
+                </div>
+
                 <div style="width: 40%; margin: auto; ">
-                    <div class="text-center">
-                        @include('partial.flash.index')
-                    </div>
 
                     <h4 class="text-center">Create an account to list and manage your property</h4>
 

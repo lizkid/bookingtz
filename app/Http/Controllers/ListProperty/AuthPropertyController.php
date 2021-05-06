@@ -34,7 +34,7 @@ class AuthPropertyController extends Controller
 //
 //        dd($result);
 
-        if (isset($result->result_code) && $result->result_code == '01')
+        if ($result->resultcode == '01')
         {
             $error = json_encode($result->message);
 
@@ -43,13 +43,16 @@ class AuthPropertyController extends Controller
             return back();
         }
 
+        else
+        {
             $cookie = cookie('token', $result->access_token, $result->expires_in/60);
 
             Session::flash('alert-success', ''.$result->message);
 
-        Session::flash('jina', ''.$email);
+            Session::flash('jina', ''.$email);
 
-        return redirect('list-your-property/propertyCategories')->withCookie($cookie);
+            return redirect('list-your-property/propertyCategories')->withCookie($cookie);
+        }
 
     }
 

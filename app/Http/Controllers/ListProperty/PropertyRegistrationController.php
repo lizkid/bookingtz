@@ -28,7 +28,7 @@ class PropertyRegistrationController extends Controller
         return view('listProperty.propertyRegistration.index', compact('categories', 'countries', 'categoryId', 'starTypeId'));
     }
 
-    public function save(Request  $request)
+    public function save(Request  $request, $categoryId, $starTypeId)
     {
         $api = bookingApi().'/hotel/save?token='.token();
 
@@ -64,7 +64,7 @@ class PropertyRegistrationController extends Controller
 
             Session::put('CreatedByID', ''.$result->CreatedByID);
 
-            return redirect('list-your-property/property-details/3/3');
+            return redirect('list-your-property/property-details/'.$categoryId.'/'.$starTypeId);
         }
 
     }

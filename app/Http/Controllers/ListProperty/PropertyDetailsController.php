@@ -25,7 +25,7 @@ class PropertyDetailsController extends Controller
         return view('listProperty.propertyRegistration.propertyDetails', compact('categories', 'countries', 'categoryId', 'starTypeId'));
     }
 
-    public function save(Request $request)
+    public function save(Request $request, $categoryId, $starTypeId)
     {
         $api = bookingApi().'/hotel/save-location?token='.token();
 
@@ -76,11 +76,11 @@ class PropertyDetailsController extends Controller
         {
             Session::flash('alert-success', ''.$result->result);
 
-            return redirect('list-your-property/property-layout/3/3', );
+            return redirect('list-your-property/property-layout/'.$categoryId.'/'.$starTypeId, );
 
-            Session::forget('hotelId', ''.$hotelId);
+            Session::forget('hotelId');
 
-            Session::forget('CreatedByID', ''.$createdById);
+            Session::forget('CreatedByID');
         }
     }
 }

@@ -15,7 +15,7 @@
 
                 <div>
 
-                    <form action="{{url('list-your-property/property-details/store')}}" method="post">
+                    <form action="{{url('list-your-property/property-details/store',[$categoryId, $starTypeId])}}" method="post">
 
                         @csrf
 

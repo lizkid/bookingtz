@@ -204,12 +204,12 @@ Route::group(['prefix'=>'list-your-property'], function (){
 
        Route::group(['prefix'=>'property-registration'], function (){
           Route::get('/{categoryId}/{starTypeId}', [PropertyRegistrationController::class, 'index']);
-          Route::post('/store', [PropertyRegistrationController::class, 'save']);
+          Route::post('/store/{categoryId}/{starTypeId}', [PropertyRegistrationController::class, 'save']);
        });
 
        Route::group(['prefix'=>'property-details'], function (){
           Route::get('/{categoryId}/{starTypeId}', [PropertyDetailsController::class, 'index']);
-          Route::post('/store', [PropertyDetailsController::class, 'save']);
+          Route::post('/store/{categoryId}/{starTypeId}', [PropertyDetailsController::class, 'save']);
        });
 
        Route::group(['prefix'=>'property-layout'], function (){
